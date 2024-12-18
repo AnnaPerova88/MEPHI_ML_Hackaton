@@ -6,8 +6,8 @@
 
 ## 🚀 Функционал
 
-- **Чат-бот**: Ответы на вопросы о картинах с использованием NLP.
-- **Голосовые команды**: Распознавание речи и ответы на голосовые запросы.
+- **Чат-бот**: Ответы на вопросы о картинах с использованием NLP, LLM, GigaChat
+- **Голосовые команды**: Распознавание речи и ответы на голосовые запросы ( GigaChat, 
 - **Распознавание картин**: Наведение камеры телефона на картины для получения информации.
 - **Дополненная реальность**: Навигация и взаимодействие с экспонатами.
 
@@ -29,6 +29,48 @@
 - **Web Speech API**: Распознавание голосовых команд.
 
 ## 📂 Структура проекта
+
+public/
+  ├── index.html
+  ├── styles.css
+  ├── script.js
+
+src/
+  ├── controllers/
+  │   ├── chatController.js
+  │   ├── voiceController.js
+  │   └── imageController.js
+  ├── models/
+  │   ├── artworkModel.js
+  │   └── userModel.js
+  ├── views/
+  │   ├── home.ejs
+  │   └── artwork.ejs
+  ├── utils/
+      ├── apiClient.js
+      └── helpers.js
+
+api/
+  ├── artworks/
+  │   ├── getArtwork.js
+  │   └── listArtworks.js
+  ├── voice/
+  │   └── recognize.js
+  ├── chat/
+      └── chat.js
+
+config/
+  ├── default.json
+  └── environment.js
+
+tests/
+  ├── unit/
+  ├── integration/
+  └── e2e/
+
+package.json
+README.md
+
 
 ### Описание основных директорий:
 
