@@ -30,46 +30,59 @@
 
 ## 📂 Структура проекта
 
-public/
-  ├── index.html
-  ├── styles.css
-  ├── script.js
+## 📂 Структура проекта
 
-src/
-  ├── controllers/
-  │   ├── chatController.js
-  │   ├── voiceController.js
-  │   └── imageController.js
-  ├── models/
-  │   ├── artworkModel.js
-  │   └── userModel.js
-  ├── views/
-  │   ├── home.ejs
-  │   └── artwork.ejs
-  ├── utils/
-      ├── apiClient.js
-      └── helpers.js
+```plaintext
+pushkin-museum-guide
+│
+├── public/                  # Статические файлы (HTML, CSS, JS, изображения)
+│   ├── index.html           # Главная страница приложения
+│   ├── styles.css           # Стили для приложения
+│   ├── script.js            # Основной скрипт для фронтенда
+│
+├── src/                     # Исходный код приложения
+│   ├── controllers/         # Логика обработки запросов
+│   │   ├── chatController.js  # Контроллер для чат-бота
+│   │   ├── voiceController.js # Контроллер для голосовых команд
+│   │   └── imageController.js # Контроллер для распознавания изображений
+│   │
+│   ├── models/              # Модели данных
+│   │   ├── artworkModel.js  # Модель данных для информации о картинах
+│   │   └── userModel.js     # Модель данных для пользователей (если требуется)
+│   │
+│   ├── views/               # Шаблоны для отображения данных
+│   │   ├── home.ejs         # Шаблон главной страницы
+│   │   └── artwork.ejs      # Шаблон для страницы картины
+│   │
+│   └── utils/               # Утилиты для работы с данными
+│       ├── apiClient.js     # Клиент для взаимодействия с API музея
+│       └── helpers.js       # Вспомогательные функции
+│
+├── api/                     # API для взаимодействия с внешними сервисами
+│   ├── artworks/            # API для получения информации о картинах
+│   │   ├── getArtwork.js    # Получение данных о конкретной картине
+│   │   └── listArtworks.js  # Получение списка картин
+│   │
+│   ├── voice/               # API для обработки голосовых запросов
+│   │   └── recognize.js     # Распознавание речи
+│   │
+│   └── chat/                # API для работы с чат-ботом
+│       └── chat.js          # Обработка текстовых запросов
+│
+├── config/                  # Конфигурация приложения
+│   ├── default.json         # Основные настройки
+│   └── environment.js       # Настройка переменных среды
+│
+├── tests/                   # Тесты
+│   ├── unit/                # Модульные тесты
+│   ├── integration/         # Интеграционные тесты
+│   └── e2e/                 # End-to-End тесты
+│
+├── package.json             # Информация о проекте и список зависимостей
+├── README.md                # Документация проекта
+└── LICENSE                  # Лицензия проекта
 
-api/
-  ├── artworks/
-  │   ├── getArtwork.js
-  │   └── listArtworks.js
-  ├── voice/
-  │   └── recognize.js
-  ├── chat/
-      └── chat.js
-
-config/
-  ├── default.json
-  └── environment.js
-
-tests/
-  ├── unit/
-  ├── integration/
-  └── e2e/
-
-package.json
-README.md
+ 
 
 
 ### Описание основных директорий:
